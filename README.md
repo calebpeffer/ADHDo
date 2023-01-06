@@ -1,50 +1,38 @@
-# :rocket: Sveltekit Starter
+[![Skeleton](https://user-images.githubusercontent.com/1509726/199282306-7454adcb-b765-4618-8438-67655a7dee47.png)](https://www.skeleton.dev/)
 
-[![Powered By Sveltekit](https://img.shields.io/badge/powered%20by-svelte-FF3C02.svg?style=flat&logo=svelte)](https://kit.svelte.dev/) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262) [![Tailwindcss](https://img.shields.io/badge/Tailwindcss-CSS--Framework-%2338B2AC?logo=tailwindcss)](https://tailwindcss.com) [![Postcss](https://img.shields.io/badge/Postcss-style-%23DD3A0A?style=flat&logo=postcss)](https://postcss.org) [![SCSS](https://img.shields.io/badge/SCSS-Style-%23CC6699?style=flat&logo=sass)](https://sass-lang.com/) [![StorybookJS](https://img.shields.io/badge/Storybook-UI--Webcomponent--tool-%23FF4785?style=flat&logo=storybook)](https://storybook.js.org/) [![Jest](https://img.shields.io/badge/Jest-Unit--Testing--Framework-%23C21325?style=flat&logo=jest)](https://jestjs.io/) [![Prettier](https://img.shields.io/badge/Prettier-code--formatter-%23F7B93E?style=flat&logo=prettier)](https://prettier.io/) [![Eslint](https://img.shields.io/badge/Eslint-linter-%234B32C3?style=flat&logo=eslint)](https://eslint.org/) [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat&logo=license)](https://github.com/navneetsharmaui/sveltekit-starter/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@skeletonlabs/skeleton?logo=npm&color=cb3837)](https://www.npmjs.com/package/@skeletonlabs/skeleton)
+[![Chat](https://img.shields.io/discord/1003691521280856084?label=chat&logo=discord&color=7289da)](https://discord.gg/EXqV7W8MtY)
+[![Twitter Follow](https://img.shields.io/twitter/follow/SkeletonUI?style=social)](https://twitter.com/SkeletonUI)
+[![license](https://img.shields.io/badge/license-MIT-%23bada55)](https://github.com/skeletonlabs/skeleton/blob/master/LICENSE)
 
-## [Svektekit Blog](https://github.com/navneetsharmaui/sveltekit-blog)
+# 💀 Skeleton
 
-Use the above link if you want to use the sveltekit blog template.
+A fully featured Svelte UI toolkit for Svelte + Tailwind. Skeleton allows you to build fast and reactive web interfaces using the power of [Svelte](https://svelte.dev/) + [Tailwind CSS](https://tailwindcss.com/). Including official support for [SvelteKit](https://kit.svelte.dev/).
 
-![sveltekit](https://user-images.githubusercontent.com/11630812/114088279-7cd7be80-98d2-11eb-883c-66c3bf48f293.png)
+## 🔗 Useful Links
 
-Sveltekit starter project created with Sveltekit, Typescript, Tailwindcss, Postcss, SCSS, Husky, ESLint, Prettier, Storybook, and Jest.
-The project has the ***SSR (Server Side Rendering)*** setup. These template is easy to configure and built upon as it has scalable structure.
+- [Documentation](https://skeleton.dev/)
+- [Contribution Guide](https://skeleton.dev/docs/contributions)
+- [Project Roadmap](https://github.com/skeletonlabs/skeleton/wiki/%F0%9F%9B%A3%EF%B8%8F-The-Skeleton-Roadmap)
 
-## :100: :fire: Project LightHouse Report
+## 👋 Community
 
-![sveltekit-starter-lighthouse-report](https://user-images.githubusercontent.com/11630812/115241377-5d485d80-a13e-11eb-8667-611770992c28.png)
+- [Join the Discord](https://discord.gg/EXqV7W8MtY)
+- [Follow on Twitter](https://twitter.com/SkeletonUI)
 
-## :paperclip: Menu
+## 👍 Sponsor the Project
 
-- :bulb: [Features](#bulb-features)
-- :hammer: [Project Setup](#hammer-project-setup)
-- :bug: [Known Bugs](https://github.com/navneetsharmaui/sveltekit-starter/issues)
+- [Ko-Fi](https://ko-fi.com/skeletonlabs)
+- [Patreon](https://patreon.com/user?u=83786276)
 
-## :bulb: Features
+## 🐞 Report an Issue
 
-- [:heavy_check_mark:] Server side rendering built with ***SEO*** in mind.
-- [:heavy_check_mark:] PWA + Service Worker + Offline.
-- [:heavy_check_mark:] Tailwindcss + Postcss + SCSS Syntax Support in Postcss.
-- [:heavy_check_mark:] Global Style and Variable preconfigured for Postcss.
-- [:heavy_check_mark:] StorybookJS preconfigured (with postcss support).
-- [:heavy_check_mark:] Browser sync, auto refresh, auto reload.
-- [:heavy_check_mark:] 100% on Google Speedpage and 100% Lighthouse report.
-- [:heavy_check_mark:] Friendly and Scalable boilerplate.
-- [:heavy_check_mark:] Typescript + TSPaths (absolute for imports in component) preconfigured.
-- [:heavy_check_mark:] Prettiers, ESLint, and Husky preconfigured.
-- [:heavy_check_mark:] Github and Vscode dotfiles preconfigured.
+- [Submit Issue](https://github.com/skeletonlabs/skeleton/issues/new/choose)
 
-## :hammer: Project Setup
+## 🛠️ Contributions
 
-1. `npx degit navneetsharmaui/sveltekit-starter my-app` or Clone this repository.
-2. `npm install` or `yarn install` or `pnpm install`.
-3. `npm run dev` or `yarn run dev` or `pnpm run dev`.
-4. `npm run build:static:ssr` or `yarn run build:static:ssr` or `pnpm run build:static:ssr`.
-5. `npm run preview` or `yarn run preview` or `pnpm run preview`.
+We've provided a detailed [contribution guide](https://www.skeleton.dev/docs/contributions) to help you get started. Pull requests are highly encouraged. [Pick an open issue](https://github.com/skeletonlabs/skeleton/issues), review requirements with contributors, then send a PR!
 
-## 💫 License
+## Core Maintainer
 
-- Code and Contributions have **MIT License**
-
-*Copyright (c) 2021 [Navneet Sharma](http://github.com/navneetsharmaui) ([@asnavneetsharma](https://twitter.com/asnavneetsharma))*
+- [Chris Simmons](https://github.com/endigo9740) (endigo9740)

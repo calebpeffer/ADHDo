@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Sveltekit Starter</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<html lang="en" class="dark">
 
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="manifest" href="/site.webmanifest" />
-		<link
-			rel="preload"
-			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-			as="style"
-			onload="this.onload=null;this.rel='stylesheet'"
-		/>
-		<link
-			rel="preload"
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			as="style"
-			onload="this.onload=null;this.rel='stylesheet'"
-		/>
-		<noscript>
-			<link
-				rel="stylesheet"
-				href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-			/>
-			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-		</noscript>
+<head>
+	<title>Skeleton — UI Toolkit for Svelte + Tailwind</title>
 
-		%svelte.head%
-	</head>
-	<body>
-		<div id="starter">%svelte.body%</div>
-	</body>
-	<noscript>
-		<div class="flex flex-col max-h-full min-h-full h-full w-full min-w-full max-w-full">
-			<p> Please enable JavaScript to continue using this application. </p>
-		</div>
-	</noscript>
+	<!-- Meta Tags -->
+	<meta charset="utf-8" />
+	<meta name="description"
+		content="Skeleton is a fully featured Svelte UI component library that allows you to build fast and reactive web UI using Svelte + Tailwind." />
+	<meta name="keywords" content="svelte, components, svelte components, ui components, sveltekit." />
+	<meta name="theme-color" content="#22c55e" />
+
+	<!-- Open Graph - https://ogp.me/ -->
+	<meta content="Skeleton" property="og:site_name" />
+	<meta content="website" property="og:type" />
+	<meta name="og:description"
+		content="Skeleton is a fully featured Svelte UI component library that allows you to build fast and reactive web UI using Svelte + Tailwind." />
+
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	%sveltekit.head%
+
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/76b174a5e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-theme="skeleton">
+	<div class="h-full overflow-hidden">%sveltekit.body%</div>
+</body>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXDKKB8FHC"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'G-DXDKKB8FHC');
+</script>
+
 </html>
