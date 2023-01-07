@@ -1,20 +1,22 @@
-<!-- TodoList.svelte -->
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
+    import { onMount } from 'svelte';
+    import { writable } from 'svelte/store';
+    import { flip } from 'svelte/animate';
 
-	interface Todo {
-		text: string;
-		completed: boolean;
-	}
+    interface Todo {
+        text: string;
+        completed: boolean;
+    }
 
-	const todos = writable<Todo[]>([]);
+    const todos = writable<Todo[]>([]);
+    const dragDuration = 300;
+    let draggingCard:Todo | undefined;
+    let animatingCards = new Set();
 
     onMount(() => {
         restoreTodosFromLocalStorage();
         saveTodosInLocalStorage();
     });
-
 
     function saveTodosInLocalStorage() {
         todos.subscribe((items) => {
@@ -29,10 +31,10 @@
         }
     }
 
-	function addTodo(todo: string) {
-		todos.update((items) => [...items, { text: todo, completed: false }]);
-	}
-    
+    function addTodo(todo: string) {
+        todos.update((items) => [...items, { text: todo, completed: false }]);
+    }
+
     function addTodoToEnd(todo: string){
         todos.update((items) => [{ text: todo, completed: false }, ...items]);
     }
@@ -44,30 +46,43 @@
             return newItems;
         });
     }
-	function completeTodo(index: number) {
-		todos.update((items) => {
-			const newItems = [...items];
-			newItems[index].completed = true;
-			return newItems;
-		});
-	}
 
-	function reorderTodos(oldIndex: number, newIndex: number) {
-		todos.update((items) => {
-			const newItems = [...items];
-			const [removed] = newItems.splice(oldIndex, 1);
-			newItems.splice(newIndex, 0, removed);
-			return newItems;
-		});
-	}
+    function completeTodo(index: number) {
+        todos.update((items) => {
+            const newItems = [...items];
+            newItems[index].completed = true;
+            return newItems;
+        });
+    }
 
-	let newTodo = '';
+    function reorderTodos(oldIndex: number, newIndex: number) {
 
-	onMount(() => {
-		todos.subscribe((items) => {
-			console.log(items);
-		});
-	});
+        todos.update((items) => {
+        const newItems = [...items];
+        const [removed] = newItems.splice(oldIndex, 1);
+        newItems.splice(newIndex, 0, removed);
+        return newItems;
+    });
+}
+
+function swapWith(index:Todo) {
+    if(draggingCard === undefined) return;
+    if (draggingCard === index || animatingCards.has(index)) return;
+    animatingCards.add(index);
+    setTimeout(() => animatingCards.delete(index), dragDuration);
+    const cardAIndex = $todos.indexOf(draggingCard);
+    const cardBIndex = $todos.indexOf(index);
+    $todos[cardAIndex] = index;
+    $todos[cardBIndex] = draggingCard;
+}
+
+let newTodo = '';
+
+onMount(() => {
+    todos.subscribe((items) => {
+        console.log(items);
+    });
+});
 </script>
 
 <div class="todo-list">
@@ -102,51 +117,33 @@
             }}
         />
     </div>
-	<br />
+    <br />
     <br />
 
-	{#each $todos as todo, index (todo)}
-		<div
-			class:completed={todo.completed}
-			class="todo-card"
-			draggable
-			on:dragstart={(event) => {
-				if (event.dataTransfer !== null) {
-					event.dataTransfer.setData('text/plain', index.toString());
-				}
-			}}
-			on:dragover={(event) => {
-				event.preventDefault();
-			}}
-			on:drop={(event) => {
-				if (event.dataTransfer !== null) {
-					const oldIndex = event.dataTransfer.getData('text/plain');
-					reorderTodos(+oldIndex, index);
-				}
-			}}
-		>
-			<div>
-                <button 
-                    class="ml-4 bg-red-500 text-white rounded-lg p-2"
-                    on:click={() => {
-                        deleteTodo(index);
-                    }}
-                >
-                clear
-                </button>  
-                <button 
-                    class="ml-4 bg-green-500 text-white rounded-lg p-2"
-                    on:click={() => {
-                        completeTodo(index);
-                    }}
-                >
-                complete
-                </button>  
-				{todo.text}
-                
-			</div>
-		</div>
-	{/each}
+    {#each $todos as todo, index (todo)}
+        <div
+            animate:flip={{ duration: dragDuration }}
+            class:completed={todo.completed}
+            class="todo-card"
+            draggable="true"
+            on:dragstart={() => draggingCard = todo}
+            on:dragend={() => draggingCard = undefined}
+            on:dragenter={() => swapWith(todo)}
+            on:dragover|preventDefault
+        >
+            {todo.text}
+            <div>
+            <button
+            class="ml-4 bg-green-500 text-white rounded-lg p-2"
+
+             on:click={() => completeTodo(index)}>Complete</button>
+            <button f
+            class="ml-4 bg-red-500 text-white rounded-lg p-2"
+
+            on:click={() => deleteTodo(index)}>Delete</button>
+        </div>
+        </div>
+    {/each}
 </div>
 
 <style>
@@ -155,7 +152,7 @@
 	}
 
 	.todo-card {
-		@apply bg-gray-200 rounded-lg p-4 mb-4 cursor-pointer;
+		@apply bg-gray-200 rounded-lg p-4 mb-4 cursor-pointer justify-between flex flex-row;
 	}
 
 	.todo-card.completed {
