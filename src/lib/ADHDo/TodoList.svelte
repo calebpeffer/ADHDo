@@ -9,6 +9,7 @@
     }
 
     const todos = writable<Todo[]>([]);
+    const completedTodos = writable<Todo[]>([]);
     const dragDuration = 300;
     let draggingCard:Todo | undefined;
     let animatingCards = new Set();
@@ -23,7 +24,7 @@
             localStorage.setItem('todos', JSON.stringify(items));
         });
     }
-
+ 
     function restoreTodosFromLocalStorage() {
         const items = localStorage.getItem('todos');
         if (items !== null) {
@@ -50,7 +51,18 @@
     function completeTodo(index: number) {
         todos.update((items) => {
             const newItems = [...items];
+
+
             newItems[index].completed = true;
+            
+            // Move completed todo to the completedTodos list
+            completedTodos.update((completedItems) => [...completedItems, newItems[index]]);
+
+            // Remove completed todo from the todos list
+            newItems.splice(index, 1);
+
+
+
             return newItems;
         });
     }
@@ -137,7 +149,38 @@ onMount(() => {
             class="ml-4 bg-green-500 text-white rounded-lg p-2"
 
              on:click={() => completeTodo(index)}>Complete</button>
-            <button f
+            <button 
+            class="ml-4 bg-red-500 text-white rounded-lg p-2"
+
+            on:click={() => deleteTodo(index)}>Delete</button>
+        </div>
+        </div>
+    {/each}
+
+    <br/>
+
+    <h1>Completed Todos</h1>
+    <br/>
+
+
+    {#each $completedTodos as todo, index (todo)}
+        <div
+            animate:flip={{ duration: dragDuration }}
+            class:completed={todo.completed}
+            class="todo-card"
+            draggable="true"
+            on:dragstart={() => draggingCard = todo}
+            on:dragend={() => draggingCard = undefined}
+            on:dragenter={() => swapWith(todo)}
+            on:dragover|preventDefault
+        >
+            {todo.text}
+            <div>
+            <button
+            class="ml-4 bg-green-500 text-white rounded-lg p-2"
+
+             on:click={() => completeTodo(index)}>Complete</button>
+            <button 
             class="ml-4 bg-red-500 text-white rounded-lg p-2"
 
             on:click={() => deleteTodo(index)}>Delete</button>
