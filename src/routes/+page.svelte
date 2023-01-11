@@ -29,16 +29,16 @@
 
 	<div class="container max-w-[1200px] mx-auto px-4 py-10 md:py-20 space-y-20">
 		<!-- Pre-Release Alert -->
-		<aside class="alert">
+		<!-- <aside class="alert">
 			<i class="fa-solid fa-triangle-exclamation text-4xl" />
 			<div class="alert-message">Skeleton is currently in beta. Expect breaking changes prior to v1.0. Please report bugs on GitHub.</div>
 			<div class="alert-actions">
 				<a href="https://github.com/skeletonlabs/skeleton/issues" target="_blank" rel="noreferrer" class="btn btn-filled">Report Issue</a>
 			</div>
-		</aside>
+		</aside> -->
 
 		<!-- Features -->
-		<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+		<!-- <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 			<h2 class="sr-only">Features</h2>
 			<div class="card card-glass-surface p-4 text-center space-y-4">
 				<div class="bg-orange-500 w-20 mx-auto lg:-mt-10 aspect-square flex justify-center items-center rounded-token shadow">
@@ -70,7 +70,7 @@
 				<h4>Powerful Utilities</h4>
 				<p>Provides a feature rich UI toolkit for modern web apps with layouts, modals, and more.</p>
 			</div>
-		</section>
+		</section> -->
 
 		<hr />
 
@@ -78,7 +78,7 @@
 		<section class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
 			<!-- Contributors -->
 			<div class="text-center space-y-6">
-				<h2>Contributors</h2>
+				<!-- <h2>Contributors</h2>
 				{#await contributors}
 					<p class="flex flex-wrap justify-center">Loading contributors...</p>
 				{:then response}
@@ -99,9 +99,9 @@
 					<span>Contribution Guide</span>
 					<span>&rarr;</span>
 				</a>
-			</div>
+			</div> -->
 			<!-- Sponsors -->
-			<div class="text-center space-y-6">
+			<!-- <div class="text-center space-y-6">
 				<h2>Sponsors</h2>
 				<a class="unstyled flex flex-col items-center space-y-4" href="https://www.brainandbonesllc.com/" target="_blank" rel="noreferrer">
 					<img src="https://www.brainandbonesllc.com/svg/logo.svg" alt="Brain & Bones" class="h-[32px] mx-auto invert dark:invert-0" />
@@ -113,7 +113,7 @@
 						Sponsor on Patreon
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</section>
 
 		<hr />
@@ -122,7 +122,7 @@
 		<section class="text-center space-y-6">
 			<h2>Meet The Team</h2>
 			<ul class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[800px] mx-auto">
-				<li class="card card-glass-surface p-4 space-y-4">
+				<!-- <li class="card card-glass-surface p-4 space-y-4">
 					<Avatar src="https://avatars.githubusercontent.com/u/1509726?v=4" width="w-32" class="mx-auto" />
 					<div>
 						<h3>Chris Simmons</h3>
@@ -140,8 +140,8 @@
 							<i class="fa-brands fa-linkedin text-xl" />
 						</a>
 					</div>
-				</li>
-				<li class="card card-glass-surface p-4 space-y-4">
+				</li> -->
+				<!-- <li class="card card-glass-surface p-4 space-y-4">
 					<Avatar src="https://avatars.githubusercontent.com/u/10255430?v=4" width="w-32" class="mx-auto" />
 					<div>
 						<h3>Trey Weir</h3>
@@ -156,7 +156,7 @@
 							<i class="fa-brands fa-linkedin text-xl" />
 						</a>
 					</div>
-				</li>
+				</li> -->
 			</ul>
 			<div class="flex justify-center gap-4">
 				<a class="btn btn-ghost-surface" href="mailto:admin@skeleton.dev">Reach Out</a>
