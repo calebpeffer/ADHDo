@@ -199,13 +199,13 @@
 
 		<!-- Social -->
 		<section class="grid grid-cols-3 gap-6">
-			<a href="https://discord.gg/EXqV7W8MtY" target="_blank" rel="noreferrer" aria-label="Discord">
+			<!-- <a href="https://discord.gg/EXqV7W8MtY" target="_blank" rel="noreferrer" aria-label="Discord">
 				<i class="fa-brands fa-discord" />
-			</a>
-			<a href="https://twitter.com/SkeletonUI" target="_blank" rel="noreferrer" aria-label="Twitter">
+			</a> -->
+			<a href="https://twitter.com/CalebPeffer" target="_blank" rel="noreferrer" aria-label="Twitter">
 				<i class="fa-brands fa-twitter" />
 			</a>
-			<a href="https://github.com/skeletonlabs/skeleton" target="_blank" rel="noreferrer" aria-label="GitHub">
+			<a href="https://github.com/calebpeffer/ADHDo" target="_blank" rel="noreferrer" aria-label="GitHub">
 				<i class="fa-brands fa-github" />
 			</a>
 		</section>

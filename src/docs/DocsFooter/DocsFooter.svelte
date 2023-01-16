@@ -17,10 +17,10 @@
 <div class="page-footer {cBase}">
 	<!-- Row 1 -->
 	<section class={cRowOne}>
-		<div class="grid grid-cols-1 gap-2 place-content-center place-items-center md:place-items-start">
+		<!-- <div class="grid grid-cols-1 gap-2 place-content-center place-items-center md:place-items-start">
 			<DocsLogoIcon />
 			<p class="!text-sm opacity-80">A fully featured UI Toolkit.</p>
-			<!-- Current Version -->
+			
 			<span class="badge badge-filled-surface">v{pkg.version}</span>
 		</div>
 		<div class="hidden md:grid grid-cols-[auto_auto_auto] gap-10">
@@ -48,14 +48,14 @@
 					<li><a href="https://www.npmjs.com/package/@skeletonlabs/skeleton" target="_blank" rel="noreferrer">NPM Package</a></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</section>
 
 	<Divider borderStyle="border-dotted" opacity="opacity-50" />
 
 	<!-- Row 2 -->
 	<section class={cRowTwo}>
-		<p class="text-xs">
+		<!-- <p class="text-xs">
 			<a href="https://github.com/skeletonlabs/skeleton/blob/master/LICENSE" target="_blank" rel="noreferrer">MIT License</a>
 			<span class="opacity-10 mx-2">|</span>
 			<a href="https://github.com/skeletonlabs/skeleton/graphs/contributors" target="_blank" rel="noreferrer">Contributors</a>
@@ -73,6 +73,6 @@
 				<i class="fa-brands fa-github" />
 				<span class="hidden md:inline-block ml-2">Github</span>
 			</a>
-		</div>
+		</div> -->
 	</section>
 </div>
