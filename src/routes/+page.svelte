@@ -27,7 +27,8 @@
 		<TodoList></TodoList>
 	</header>
 
-	<div class="container max-w-[1200px] mx-auto px-4 py-10 md:py-20 space-y-20">
+	<!-- SET TO DISPLAY NONE TEMPORARILY. REMOVE DISPLAY NONE TO SHOW -->
+	<div class="hidden container max-w-[1200px] mx-auto px-4 py-10 md:py-20 space-y-20 ">
 		<!-- Pre-Release Alert -->
 		<!-- <aside class="alert">
 			<i class="fa-solid fa-triangle-exclamation text-4xl" />
@@ -119,10 +120,10 @@
 		<hr />
 
 		<!-- Team -->
-		<section class="text-center space-y-6">
+		<!-- <section class="text-center space-y-6">
 			<h2>Meet The Team</h2>
 			<ul class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[800px] mx-auto">
-				<!-- <li class="card card-glass-surface p-4 space-y-4">
+				<li class="card card-glass-surface p-4 space-y-4">
 					<Avatar src="https://avatars.githubusercontent.com/u/1509726?v=4" width="w-32" class="mx-auto" />
 					<div>
 						<h3>Chris Simmons</h3>
@@ -140,8 +141,8 @@
 							<i class="fa-brands fa-linkedin text-xl" />
 						</a>
 					</div>
-				</li> -->
-				<!-- <li class="card card-glass-surface p-4 space-y-4">
+				</li>
+				<li class="card card-glass-surface p-4 space-y-4">
 					<Avatar src="https://avatars.githubusercontent.com/u/10255430?v=4" width="w-32" class="mx-auto" />
 					<div>
 						<h3>Trey Weir</h3>
@@ -156,7 +157,7 @@
 							<i class="fa-brands fa-linkedin text-xl" />
 						</a>
 					</div>
-				</li> -->
+				</li>
 			</ul>
 			<div class="flex justify-center gap-4">
 				<a class="btn btn-ghost-surface" href="mailto:admin@skeleton.dev">Reach Out</a>
@@ -165,6 +166,6 @@
 					<span>&rarr;</span>
 				</a>
 			</div>
-		</section>
+		</section> -->
 	</div>
 </div>

@@ -17,13 +17,13 @@
 <div class="page-footer {cBase}">
 	<!-- Row 1 -->
 	<section class={cRowOne}>
-		<!-- <div class="grid grid-cols-1 gap-2 place-content-center place-items-center md:place-items-start">
+		<div class="grid grid-cols-1 gap-2 place-content-center place-items-center md:place-items-start">
 			<DocsLogoIcon />
-			<p class="!text-sm opacity-80">A fully featured UI Toolkit.</p>
+			<p class="!text-sm opacity-80">Task Managment for those who need it most</p>
 			
 			<span class="badge badge-filled-surface">v{pkg.version}</span>
 		</div>
-		<div class="hidden md:grid grid-cols-[auto_auto_auto] gap-10">
+		<!-- <div class="hidden md:grid grid-cols-[auto_auto_auto] gap-10">
 			<div class="space-y-4">
 				<h6>About</h6>
 				<ul class="space-y-2">

@@ -123,7 +123,7 @@ onMount(() => {
             placeholder="Add a new to-do"
             on:keydown={(event) => {
                 if (event.key === 'Enter') {
-                    addTodo(newTodo);
+                    addTodoToEnd(newTodo);
                     newTodo = '';
                 }
             }}
@@ -176,10 +176,13 @@ onMount(() => {
         >
             {todo.text}
             <div>
+
+            {#if todo.completed}
             <button
             class="ml-4 bg-green-500 text-white rounded-lg p-2"
 
              on:click={() => completeTodo(index)}>Complete</button>
+             {/if}
             <button 
             class="ml-4 bg-red-500 text-white rounded-lg p-2"
 
@@ -199,7 +202,7 @@ onMount(() => {
 	}
 
 	.todo-card.completed {
-		@apply text-gray-600 line-through;
+		@apply text-gray-600 border-green-400 border-2;
 	}
 
 	.todo-input {
